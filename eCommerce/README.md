@@ -36,3 +36,10 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+
+## Helps along the way
+
+[path resolver for components imports](https://dev.to/danawoodman/how-to-add-module-import-aliases-in-sveltekit-2ck)
+
+[dynamic css in svelte](https://svelte.dev/repl/8123d474edb04f198c3b83363716a709?version=3.44.2)
