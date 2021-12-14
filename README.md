@@ -43,3 +43,5 @@ npm run build
 [path resolver for components imports](https://dev.to/danawoodman/how-to-add-module-import-aliases-in-sveltekit-2ck)
 
 [dynamic css in svelte](https://svelte.dev/repl/8123d474edb04f198c3b83363716a709?version=3.44.2)
+
+[deploy on netlify](https://www.reddit.com/r/sveltejs/comments/fkxr6u/how_to_deploy_your_svelte_app_in_60_seconds/)
