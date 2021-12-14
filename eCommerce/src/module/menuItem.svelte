@@ -5,7 +5,11 @@
 	<div class="content" style="{cssVarStyles}">
 		<div class="description">{description}</div>
 		<div class="amount">${amount}</div>
-		<a href="" on:click="{addToCart}">Add to Cart</a>
+		{#if isAdded}
+			<div class="button added">In Cart</div>
+		{:else}
+			<div class="button" on:click="{addToCart}">Add to Cart</div>
+		{/if}
 	</div>
 </div>
 
@@ -13,7 +17,7 @@
 	export function load({id, image, description, amount, background}) {
 		return {
 			props: {
-				id, image, description, amount, background
+				id, image, description, amount, background, isAdded
 			}
 		}
 	}
@@ -22,7 +26,7 @@
 	import { createEventDispatcher } from 'svelte'
 
 	const dispatch = createEventDispatcher()
-	export let image, description, amount, id, background = 'F0F0F0'
+	export let image, description, amount, id, background = 'F0F0F0', isAdded = false
 
 	export const imageSrc = 'images/'+ image
 	
@@ -81,7 +85,7 @@
 		font-weight: bold;
 		margin: 16px 0px;
 	}
-	.content a{
+	.content .button{
 		padding: 4px 18px;
 
 		display: flex;
@@ -101,5 +105,9 @@
 		color: #FFFFFF;
 		font-size: 16px;
 		font-weight: bold;
+	}
+
+	.content .button.added {
+		background-color: #000000;
 	}
 </style>
